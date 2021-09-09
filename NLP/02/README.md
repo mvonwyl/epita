@@ -43,6 +43,6 @@ To get a grip on what WordNet can do, just follow the tutorial provided by the N
 For the first module, you will be evaluated on implementing several methods of text sentiment classification.
 We start today with discovering the dataset. We will use the IMDB 50K movie reviews dataset. This dataset contains 50K manually written review with an associated sentiment: positive and negative. 25K reviews are used as training set and 25K review as evaluation set.
 
-Start by [downloading](https://pytorch.org/text/stable/datasets.html#imdb) the dataset from torchText here, and look at the data (presentation, label, ...). How could we make the text cleaner?
+Start by downloading the dataset from [torchText](https://pytorch.org/text/stable/datasets.html#imdb) or [dataset](https://huggingface.co/docs/datasets/), and look at the data (presentation, label, ...). How could we make the text cleaner?
 
 
