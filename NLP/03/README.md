@@ -40,7 +40,7 @@ You don't need to code your own logistic regression from scratch. You can simply
 
 ### Evaluation measure
 
-Since the classes are balanced, you can use accuracy as an evaluation measure.
+Please report [precision, recall, and F1-score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html) for both classes, on the test data for all models you are comparing.
 
 
 ## Project
