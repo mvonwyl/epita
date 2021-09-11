@@ -41,7 +41,6 @@ Document your experiments (accuracy, hyperparameters search, model selection, ..
 
 * Pretreatment is key for these models. Make sure you apply the same pretreatment at training and test time.
 * Do not do hyperparameter search using the test set. Extract a validation set from the training data for that purpose. The test set is only made for comparing final models (see [data leakage](https://en.wikipedia.org/wiki/Leakage_%28machine_learning%29)).
-* You can try eliminating words which don't seem to play a role in the decision (perhaps using [POS tagging](https://spacy.io/usage/linguistic-features#pos-tagging))
 * It's fine if you don't beat the baseline. Just make sure you tried enough methods, and explain and analyse your results well enough.
 
 ## Evaluation
