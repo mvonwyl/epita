@@ -21,8 +21,28 @@ FastText provides two main features:
 Train a FastText classifier on the IMDB dataset as a baseline.
 * Try with and without pretreatment (please document your pretreatment).
 * Do a bit of [hyperparameters tunning](https://fasttext.cc/docs/en/autotune.html). Play with the learning rate, vector dimensions, and word ngrams parameters. Please use a subset of the training set as validation set. **Do not use the test set for hyperparameter tuning**.
-* Report the accuracy of your experiments on the test data.
+* Report the precision, recall, and F1-score for both classes of all your experiments on the test data.
 * For your best classifier, provide examples of wrongly classified samples for both class as well as why you believe these examples were wrongly classified.
+
+### Tips on using FastText
+
+FastText is not exactly well documented, so you might run into a few problems. The following most likely be useful.
+
+#### Training file format
+
+Training a FastText classifier takes a text file as input. Every line correspond to a sample and must have the following format
+```
+__label__<your_label> <corresponding text>
+```
+For example, in our case a line should look like this.
+```
+__label__positive you know robin williams god bless him is constantly...
+```
+Also, the data are presented `positive` first and then `negative`. To avoid having a strong model bias toward `negative`, shuffle your data.
+
+#### Random seed
+
+To my knowledge, there is no way to set the random seed for FastText. It uses C++ code in the back, so using `random.seed()` won't help. For every other model you will use here, please set the random seed to make your result reproductible.
 
 ## Beating the baseline
 
@@ -35,7 +55,7 @@ All of them provide pretrained word embeddings and ways of training word embeddi
 
 Connect the word embeddings to a classifier of your choice (logisitic regression, SVM, ...). A common way of doing so is taking the average vector of all the words in the review and using the vector as input for your classifier.
 
-Document your experiments (accuracy, hyperparameters search, model selection, ...), and for the best model provide examples of wrongly classified samples for both class as well as why you believe these examples were wrongly classified.
+Document your experiments (precision, recall, F1-score, hyperparameters search, model selection, ...), and for the best model provide examples of wrongly classified samples for both class as well as why you believe these examples were wrongly classified.
 
 ## Tips and advices
 
