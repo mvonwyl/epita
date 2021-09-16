@@ -7,7 +7,7 @@ In this session, you will code the first part of our project: a sentiment classi
 ## The dataset
 
 The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as positive or negative, and split in two sets of equal size: a training and a test set. Both set have an equal number of positive and negative review. The dataset is available on several libraries.
-* HuggingFace [datasets](https://huggingface.co/docs/datasets/)
+* HuggingFace [datasets](https://huggingface.co/docs/datasets/) (< **recommended**)
 * [TorchText](http://pytorch.org/text/master/datasets.html?highlight=imdb#torchtext.datasets.IMDB)
 * [Keras](https://keras.io/api/datasets/imdb/)
 
