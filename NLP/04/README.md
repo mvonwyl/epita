@@ -8,7 +8,7 @@ The project is a continuation of we started on the third lab. We will try beatin
 ## The dataset
 
 We continue with the IMDB sentiment dataset, which is available on several libraries.
-* HuggingFace [datasets](https://huggingface.co/docs/datasets/)
+* HuggingFace [datasets](https://huggingface.co/docs/datasets/) (< **recommended**)
 * [TorchText](http://pytorch.org/text/master/datasets.html?highlight=imdb#torchtext.datasets.IMDB)
 * [Keras](https://keras.io/api/datasets/imdb/)
 
@@ -26,7 +26,7 @@ Train a FastText classifier on the IMDB dataset as a baseline.
 
 ### Tips on using FastText
 
-FastText is not exactly well documented, so you might run into a few problems. The following most likely be useful.
+FastText is not exactly well documented, so you might run into a few problems. The following tips can be useful.
 
 #### Training file format
 
@@ -38,7 +38,7 @@ For example, in our case a line should look like this.
 ```
 __label__positive you know robin williams god bless him is constantly...
 ```
-Also, the data are presented `positive` first and then `negative`. To avoid having a strong model bias toward `negative`, shuffle your data.
+Also, the data are presented `positive` first and then `negative`. To avoid having a strong model bias toward `negative`, **shuffle your data**.
 
 #### Random seed
 

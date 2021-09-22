@@ -72,7 +72,7 @@ For coding standards, please respect the following guidelines
 * Make your results reproducible (force random seeds values)
 * Don't hesitate commenting in details part of the code you consider complex or hard to read
 
-Provide a `README.md` file with 
+Provide a `README.md` file with
 * A short description of the project
 * A description of the file/module architecture
 * How to install the dependencies, run the code, and reproduce your results
