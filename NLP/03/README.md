@@ -78,4 +78,4 @@ Provide a `README.md` file with
 * How to install the dependencies, run the code, and reproduce your results
   * Provide at least a `requirements.txt` or a conda yaml file, and the minimum python version to run your code.
 
-Please send the final project in archived zip or tar file before the 14th of October (last chance Wednesday at midnight).
+Please send the final project in archived zip or tar file before the 7th of October (last chance Wednesday at midnight).
