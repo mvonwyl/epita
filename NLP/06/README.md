@@ -14,15 +14,18 @@ To start with, just follow the pyTorch [language translation with nn.Transformer
 !python -m spacy download en_core_web_sm
 !python -m spacy download de_core_news_sm
 ```
+As the training takes time (~20min), you can start looking at the following steps while it finishes.
+
 ### 2. Compute the BLEU score of the model
-Once you have gone through the tutorial, measure the BLEU score of your model on the test set. As we have seen in class, you should not try coding your own version of the algorithm. Instead use the [sacreBLEU](https://github.com/mjpost/sacreBLEU) implementation. In the [python section](https://github.com/mjpost/sacreBLEU), you'll notice the library accepts more than just one possible translation as reference, but the given dataset only has one translation per sample. You can also 
+Once you have gone through the tutorial, measure the BLEU score of your model on the test set. As we have seen in class, you should not try coding your own version of the algorithm. Instead use the [sacreBLEU](https://github.com/mjpost/sacreBLEU) implementation. In the [python section](https://github.com/mjpost/sacreBLEU), you'll notice the library accepts more than just one possible translation as reference, but the given dataset only has one translation per sample.
 
 ### 3. Try with another language
 
-Use the [Tatoeba dataset](https://huggingface.co/datasets/tatoeba) with the language pair of your choice to train the model again. Beware that the Multi30K dataset has 29K training sample and 1K test sample, while the Tatoeba dataset only has a training set (you'll have to split it yourself) and 262K sentence pairs for their English-French data. So maybe train the transformer on a sub-sample.
+Use the [Tatoeba dataset](https://huggingface.co/datasets/tatoeba) with the language pair of your choice to train the model again. Beware that the Multi30K dataset has 29K training sample and 1K test sample, while the Tatoeba dataset only has a training set (you'll have to split it yourself) and 262K sentence pairs for their English-French data. So maybe train the transformer on a sub-sample. As a suggestion, sort the sentences per size and only use the first 30K. 
 
-## Classical RNN + Attention model
+### 4. Classical RNN + Attention model [OPTIONAL]
 
+Using [this pyTorch tutorial](https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html) as an example, implement an RNN + attention model and train it on the same data at the model above. Here using smaller sentences, as suggested above, will help. Use directly the attention decoder.
 
 ## Going further
 
