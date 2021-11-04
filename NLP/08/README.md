@@ -71,7 +71,7 @@ Use a nearest neighbour approximation library to see if you can speed your searc
 
 Connect your two systems as one. Put together a system that can extract an answer from the whole dataset created at the previous step. If you packaged everything correctly, you'll just have to connect the different classes and functions.
 
-Create a system which takes a question, return the top K relevant documents, and look into these K document to extract the potential answers.
+Create a system which takes a question, return the top K relevant documents, and look into these K document to extract the most likely answer.
 
 ### What needs to be done
 
