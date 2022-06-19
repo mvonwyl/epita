@@ -11,20 +11,20 @@ For coding standards, please respect the following guidelines
 * Make your results reproducible (force random seeds values when necessary and possible).
 * Don't hesitate commenting in details part of the code you consider complex or hard to read.
 
-## The dataset
+## The dataset **(3 points)**
 
 The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as positive or negative, and split in two sets of equal size: a training and a test set. Both set have an equal number of positive and negative review. The dataset is available on several libraries, but we ask that you use the following one HuggingFace [datasets](https://huggingface.co/datasets/imdb) version. Follow their [tutorial](https://huggingface.co/docs/datasets/load_hub) on how to use the library for more details.
 
-Download and look at the dataset. Answer the following questions **(3 points)**:
+Download and look at the dataset. Answer the following questions.
 1. How many splits does the dataset has? (1 point)
 2. How big are these splits? (1 point)
 3. What is the proportion of each class on the supervised splits? (1 point)
 
-## Naive Bayes classifier
+## Naive Bayes classifier **(9 points)**
 
 Implement your own naive Bayes classifier (the pseudo code can be found in the slides or the [book reference](https://web.stanford.edu/~jurafsky/slp3/)) or use [one provided by scikit-learn](https://scikit-learn.org/stable/modules/naive_bayes.html#multinomial-naive-bayes) combined with a [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html).
 
-Go through the following steps **(9 points)**.
+Go through the following steps.
 1. Create a pretreatment function which (2 points)
    1. Lower case the text.
    2. Remove punctuation (you can use `from string import punctuation` to ease your work). 
@@ -36,11 +36,11 @@ Go through the following steps **(9 points)**.
    2. Remove stopwords (see [NLTK stopwords corpus](https://pythonspot.com/nltk-stop-words/)) and check again.
 7. Take at least 2 wrongly classified example from the test set and try explaining why the model failed. (1 point)
 
-## FastText
+## FastText **(9 points)**
 
 Use the [FastText library](https://fasttext.cc/docs/en/support.html) to train and test a classifier.
 
-Go through the following steps **(9 points)**.
+Go through the following steps.
 1. Turn the dataset into a dataset compatible with Fastext (see the _Tips on using FastText_ section a bit lower). (2 points)
    * For pretreatment, only apply lower casing and punctuation removal.
 2. Train a FastText classifier with default parameters on the training data, and evaluate it on the test data using accuracy. (2 points)
@@ -77,11 +77,11 @@ You can check a model's attributes as they are listed on the [cheatsheet](https:
 
 To my knowledge, there is no way to set the random seed for FastText. It uses C++ code in the back, so using `random.seed()` won't help. For every other model you will use here, please set the random seed to make your result reproductible.
 
-## Theoritical questions
+## Theoritical questions **(7 points)**
 
 The following questions have been seen during the course and can be found on the support and reference. Don't copy-paste what is written in the course, try answering with your own words.
 
-Answer the following questions **(7 points)**.
+Answer the following questions.
 1. Explain with your own words, using a short paragraph for each, what are: (2 point)
    * Phonetics and phonology
    * Morphology and syntax
