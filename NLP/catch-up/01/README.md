@@ -6,16 +6,16 @@ In this small project, you will code a sentiment classifier using the naive Baye
 
 For coding standards, please respect the following guidelines
 * Use [docstring](https://www.programiz.com/python-programming/docstrings) format to describe your functions and their arguments.
-* Use typing.
+* Use [typing](https://realpython.com/python-type-checking/).
 * Have clear and verbatim variable names (not x, x1, x2, xx, another_x, ...).
 * Make your results reproducible (force random seeds values when necessary and possible).
 * Don't hesitate commenting in details part of the code you consider complex or hard to read.
 
 ## The dataset **(3 points)**
 
-The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as positive or negative, and split in two sets of equal size: a training and a test set. Both set have an equal number of positive and negative review. The dataset is available on several libraries, but we ask that you use the following one HuggingFace [datasets](https://huggingface.co/datasets/imdb) version. Follow their [tutorial](https://huggingface.co/docs/datasets/load_hub) on how to use the library for more details.
+The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as positive or negative, and split in two sets of equal size: a training and a test set. Both set have an equal number of positive and negative review. The dataset is available on several libraries, but we ask that you use the HuggingFace [datasets](https://huggingface.co/datasets/imdb) version. Follow their [tutorial](https://huggingface.co/docs/datasets/load_hub) on how to use the library for more details.
 
-Download and look at the dataset. Answer the following questions.
+Download and look at the dataset, and answer the following questions.
 1. How many splits does the dataset has? (1 point)
 2. How big are these splits? (1 point)
 3. What is the proportion of each class on the supervised splits? (1 point)
@@ -30,11 +30,12 @@ Go through the following steps.
    2. Remove punctuation (you can use `from string import punctuation` to ease your work). 
    3. **\[Bonus\]** add other pretreatments. (bonus points)
 2. Train a naive Bayes classifier on the training set. (4 points)
-3. Report the accuracy on both training and test set. Why is accuracy a sufficient measure of evaluation here? (2 points)
-4. **\[Bonus\]** What are the top 10 most important words (features) for each class? (bonus points)
+3. Report the accuracy on both training and test set. (1 point)
+4. Why is accuracy a sufficient measure of evaluation here? (1 point)
+5. **\[Bonus\]** What are the top 10 most important words (features) for each class? (bonus points)
    1. Look at the words with the highest likelihood in each class (if you use scikit-learn, you want to check `feature_log_prob_`).
    2. Remove stopwords (see [NLTK stopwords corpus](https://pythonspot.com/nltk-stop-words/)) and check again.
-7. Take at least 2 wrongly classified example from the test set and try explaining why the model failed. (1 point)
+6. Take at least 2 wrongly classified example from the test set and try explaining why the model failed. (1 point)
 
 ## FastText **(9 points)**
 
@@ -55,11 +56,11 @@ Go through the following steps.
 
 ### Tips on using FastText
 
-FastText is not exactly well documented, so you might run into a few problems. The following tips can be useful.
+FastText is not exactly documented in details, so you might run into a few problems. The following tips can be useful.
 
 #### Training file format
 
-Training a FastText classifier takes a text file as input. Every line correspond to a sample and must have the following format
+Training a FastText classifier takes a text file as input. Every line corresponds to a sample and must have the following format
 ```
 __label__<your_label> <corresponding text>
 ```
@@ -67,11 +68,11 @@ For example, in our case a line should look like this.
 ```
 __label__positive you know robin williams god bless him is constantly...
 ```
-Also, the data are presented `positive` first and then `negative`. To avoid having a strong model bias toward `negative`, **shuffle your data**.
+Also, the data are presented `positive` first and then `negative`. To avoid having a strong model bias toward `negative`, **shuffle your data before training**.
 
 #### Attributes
 
-You can check a model's attributes as they are listed on the [cheatsheet](https://fasttext.cc/docs/en/options.html). However, they are listed in camel case (as they are attributes of the command line interface). In python, you'll find the same attributes but in snake case (e.g. `wordNgrams` -> `word_ngrams`).
+You can check a model's attributes as they are listed on the [cheatsheet](https://fasttext.cc/docs/en/options.html). Also, if you have a well configure IDE or use Jupyter Lab, tab is your friend.
 
 #### Random seed
 
@@ -79,14 +80,15 @@ To my knowledge, there is no way to set the random seed for FastText. It uses C+
 
 ## Theoritical questions **(7 points)**
 
-The following questions have been seen during the course and can be found on the support and reference. Don't copy-paste what is written in the course, try answering with your own words.
+The following questions have been seen during the course and can be found on the support and reference. Don't copy-paste what is written in the course, answer with your own words.
 
 Answer the following questions.
-1. Explain with your own words, using a short paragraph for each, what are: (2 point)
+1. Explain with your own words, using a short paragraph for each, what are: (2 points)
    * Phonetics and phonology
    * Morphology and syntax
    * Semantics and pragmatics
 2. What is the difference between stemming and lemmatization? (1 point)
+   * How do they both work?
    * What are the pros and cons of both methods?
 3. On logistic regression: (1 point)
    * How does stochastic gradient descent work?
@@ -106,28 +108,21 @@ The assignment will be evaluated on the following criteria.
 * A report answering the questions above, describing your technical choices, and analysing your results.
 * The quality of your code (modularity, efficiency, comments, coding standards).
 
-For coding standards, please respect the following guidelines **(4 points)**.
-* Use [docstring](https://www.programiz.com/python-programming/docstrings) format to describe your functions and their arguments
-* Use typing.
-* Have clear and verbatim variable names (not x, x1, x2, xx, another_x, ...).
-* Make your results reproducible (force random seeds values).
-* Don't hesitate commenting in details part of the code you consider complex or hard to read.
-
 Provide a `README.md` file with:
 * A short description of the project.
 * A description of the file/module architecture.
 * How to install the dependencies, run the code, and reproduce your results.
   * Provide at least a `requirements.txt` or a conda yaml file, and the minimum python version to run your code.
 
-Please provide your code on a github repo as well as a report sent to `marc.von-wyl` at `epita` dot `fr` before the ...
+Please provide your code on a github repo and send it to `marc.von-wyl` at `epita` dot `fr` before midnight on the 6th of July.
 
 ### Points
 
-Every part of the work is graded on a certain number of points.
+Every part of this work is graded on a certain number of points.
 * 3 points on the dataset.
 * 9 points on naive Bayes.
 * 9 points on FastText.
 * 7 points on the theory.
-* 4 points on your coding standards.
+* 4 points on coding standards.
 
 It sums to 32 points which are then projected to a grade going from 0 to 16. Additional points can be earned by answering the bonus questions, or going further then asked on parts of the work and report.

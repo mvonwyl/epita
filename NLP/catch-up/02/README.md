@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The second evaluation is made of two small projects and theoritical questions on the class.
+The second evaluation is made of two small projects and theoritical questions on the course.
 
 For coding standards, please respect the following guidelines
 * Use [docstring](https://www.programiz.com/python-programming/docstrings) format to describe your functions and their arguments.
@@ -15,7 +15,7 @@ For coding standards, please respect the following guidelines
 
 ### Library and dataset
 
-On the first part, you will continue the work on our sentiment classifer using a pre-trained transformer. The goal is to use the HuggingFace transformers library to fine-tune a pre-trained transformer on the old IMDB dataset. If you haven't done it yet (and as it was asked on the [7th lab](https://github.com/mvonwyl/epita/tree/master/NLP/07)), it is strongly recommended that you follow [HuggingFace course](https://huggingface.co/course/chapter1/1), at least lessons 1 to 4, before you start this part.
+On the first part, you will continue the work on our sentiment classifer using a pre-trained transformer. The goal is to use the HuggingFace transformers library to fine-tune a pre-trained transformer on the old IMDB dataset. If you haven't done it yet (and as it was asked on the [7th lab](https://github.com/mvonwyl/epita/tree/master/NLP/07)), it is strongly recommended that you follow [HuggingFace course](https://huggingface.co/course/chapter1/1), at least lessons 1 to 4 (especially 3), before you start this part.
 
 The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as positive or negative, and split in two sets of equal size: a training and a test set. Both set have an equal number of positive and negative review. The dataset is available on several libraries, but we ask that you use the following one HuggingFace [datasets](https://huggingface.co/datasets/imdb) version. If you haven't done it yet, follow their [tutorial](https://huggingface.co/docs/datasets/load_hub) on how to use the library for more details.
 
@@ -23,16 +23,20 @@ The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as po
 
 Use the HuggingFace transformer library to fine-tune a model on the IMDB library dataset and then evaluate it on the test set. Go through the following steps.
 
-1. Fine-tune the model on the training data. (4 points)
+1. Fine-tune the model on the training data. (5 points)
+   * Since the IMDB dataset doesn't have validation split, a function generating a new dataset with an extra validation set is available in the [notebook](?).
    * You can use Google colab if you do not have access to a machine with a strong GPU. Thus, for that part only, you can put all your code on a single notebook without packaging it.
-   * We recommend using `https://huggingface.co/distilbert-base-uncased` as pre-trained model, as it is light and will fine-tune fast. If you want to use any other model, please make sure your document choice and why you use the model. **Beware** some models have already been fine-tuned with the IMDB dataset, so make sure you do not use any of those (the data used to train/fine-tune a model should be visible on the model's card). Other potential models are:
+      * To make sure your model is loaded on GPU, after creating the `Trainer` (see HuggingFace course) object, check that your model is on a GPU, by looking at `model.device`. It should tell you it's on a `cuda` device.
+   * We recommend using [distilbert](https://huggingface.co/distilbert-base-uncased) as pre-trained model, as it is light and will fine-tune fast. If you want to use any other model, please make sure your document choice and why you use the model. **Beware** some models have already been fine-tuned with the IMDB dataset, so make sure you do not use any of those (the data used to train/fine-tune a model should be visible on the model's card). Other potential models are:
       * [BERT](https://huggingface.co/bert-base-uncased)
       * [RoBERTa](https://huggingface.co/roberta-base)
    * Provide the notebook used to train your model with adequate comments.
    * It is not mandatory that you save your model on HuggingFace model hub, but if you do, please fill up the model's card.
 2. Evaluate the model in term of accuracy on the test data. (2 points)
 3. Find the samples on the test set which are wrongly classified with the highest probability (sample on which the model gives the highest probability on the wrong class), and for at least 2 of them, try explaining why the model could have been wrong. (2 points).
+   * Note that your model's ouputs are logits, not probability. To turn them into probablity, you need to make them go through a softmax function.
 4. What are the advantages and inconvenient of using this model in production compared to the naive Bayes we implemented in the first part of the course? (1 point)
+5. **\[Bonus\]** Fine-tune your model using a custom `Trainer` or even without a `Trainer`. Use the accuracy as evaluation instead of the loss. Return the model with the best results on the validation set instead of the last one. (many points)
 
 ## Second project: semantic search
 
