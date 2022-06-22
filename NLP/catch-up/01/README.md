@@ -2,7 +2,9 @@
 
 ## Introduction
 
-In this small project, you will code a sentiment classifier using the naive Bayes methods seen in class, and compare it with the FastText library. There will be a few theoritical questions to answer as well.
+In this small project, you will code a sentiment classifier using the naive Bayes methods seen in class and compare it with the FastText library. There are a few theoritical questions to answer as well.
+
+**Please, read the full assignment before starting.**
 
 For coding standards, please respect the following guidelines
 * Use [docstring](https://www.programiz.com/python-programming/docstrings) format to describe your functions and their arguments.
@@ -10,6 +12,8 @@ For coding standards, please respect the following guidelines
 * Have clear and verbatim variable names (not x, x1, x2, xx, another_x, ...).
 * Make your results reproducible (force random seeds values when necessary and possible).
 * Don't hesitate commenting in details part of the code you consider complex or hard to read.
+
+Do not hesitate contacting me if you have any question, but please don't wait until the last moment to do so.
 
 ## The dataset **(3 points)**
 
@@ -48,10 +52,11 @@ Go through the following steps.
 3. Use the [hyperparameters search functionality](https://fasttext.cc/docs/en/autotune.html) of FastText and repeat step 2. (3 points)
    * To do so, you'll need to [split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) your training set into a training and a validation set (don't forget to shuffle your dataset).
    * Let the model search for 5 minutes (it's the default search time).
-4. Look at their [attributes](https://fasttext.cc/docs/en/options.html). How do the two models differ? (2 points)
+4. Look at their [attributes](https://fasttext.cc/docs/en/options.html). How do the two models differ? (1 points)
    * Only refer to the attributes you think are interesting, not all of them.
-   * See the _Tips on using FastText_ for help.
-5. **\[Bonus\]** Why is it likely the attribute `minn` and `maxn` are at 0 after an hyperparameter search on our data? (bonus point)
+   * See the _Tips on using FastText_ (just below) for help.
+5. Using the tuned model, take at least 2 wrongly classified examples from the test set, and try explaining why the model failed. (1 point)
+6. **\[Bonus\]** Why is it likely that the attributes `minn` and `maxn` are at 0 after an hyperparameter search on our data? (bonus point)
    * Hint: think about the morphology of English.
 
 ### Tips on using FastText
@@ -76,11 +81,11 @@ You can check a model's attributes as they are listed on the [cheatsheet](https:
 
 #### Random seed
 
-To my knowledge, there is no way to set the random seed for FastText. It uses C++ code in the back, so using `random.seed()` won't help. For every other model you will use here, please set the random seed to make your result reproductible.
+To my knowledge, there is no way to set the random seed for FastText. It uses C++ code in the back, so using `random.seed()` won't help. For every other model you will use in these projects, please set the random seed to make your results reproductible.
 
 ## Theoritical questions **(7 points)**
 
-The following questions have been seen during the course and can be found on the support and reference. Don't copy-paste what is written in the course, answer with your own words.
+The following questions have been seen during the course and can be found on the support and references. Don't copy-paste what is written in the course, answer with your own words.
 
 Answer the following questions.
 1. Explain with your own words, using a short paragraph for each, what are: (2 points)
@@ -106,6 +111,7 @@ Answer the following questions.
 The assignment will be evaluated on the following criteria.
 
 * A report answering the questions above, describing your technical choices, and analysing your results.
+   * Can be written in French or English.
 * The quality of your code (modularity, efficiency, comments, coding standards).
 
 Provide a `README.md` file with:
@@ -114,9 +120,9 @@ Provide a `README.md` file with:
 * How to install the dependencies, run the code, and reproduce your results.
   * Provide at least a `requirements.txt` or a conda yaml file, and the minimum python version to run your code.
 
-Please provide your code on a github repo and send it to `marc.von-wyl` at `epita` dot `fr` before midnight on the 6th of July.
+Please provide your code and report on a github repository, and send a link to it to `marc.von-wyl` at `epita` dot `fr` before midnight on the 6th of July.
 
-### Points
+### Grade computation
 
 Every part of this work is graded on a certain number of points.
 * 3 points on the dataset.
@@ -125,4 +131,4 @@ Every part of this work is graded on a certain number of points.
 * 7 points on the theory.
 * 4 points on coding standards.
 
-It sums to 32 points which are then projected to a grade going from 0 to 16. Additional points can be earned by answering the bonus questions, or going further then asked on parts of the work and report.
+It sums to 32 points which are then projected to a grade going from 0 to 16. Additional points can be earned by answering the bonus questions, or going further than what was asked.
