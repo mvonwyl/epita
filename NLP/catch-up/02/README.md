@@ -21,7 +21,7 @@ You will apply a pre-trained transformer model to our sentiment classifier datas
 
 The IMDB sentiment dataset is a collection of 50K movie reviews, annotated as positive or negative, and split in two sets of equal size: a training and a test set. Both set have an equal number of positive and negative review. The dataset is available on several libraries, but we ask that you use the following one HuggingFace [datasets](https://huggingface.co/datasets/imdb) version. If you haven't done it yet, follow their [tutorial](https://huggingface.co/docs/datasets/load_hub) on how to use the library for more details.
 
-To train the model using the `Trainer` class, you need a training and a validation set (the model is trained on the training set, and `Trainer` return the best model based on the validation set). But our dataset doesn't have a validation set.
+To train the model using the `Trainer` class, you need a training and a validation set (the model is trained on the training set, and `Trainer` returns the best model based on the validation set). But our dataset doesn't have a validation set.
 
 1. (2 points) Split the training set into a training and validation set ([tutorial](https://huggingface.co/course/chapter5/3?fw=pt#creating-a-validation-set), [documentation](https://huggingface.co/docs/datasets/v2.3.2/en/package_reference/main_classes#datasets.Dataset.train_test_split)). Use an 80/20 split. Make sure it's stratified (the proportion of each class must be the same in the training and validation set).
 2. (1 point) Make sure the training and validation set have the same proportion of both class.
