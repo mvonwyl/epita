@@ -11,7 +11,7 @@ For coding standards, please respect the following guidelines
 * Make your results reproducible (force random seeds values when necessary and possible).
 * Don't hesitate commenting in details part of the code you consider complex or hard to read.
 
-## Project closing on the sentiment classifier (12 points)
+## Closing on the sentiment classifier (12 points)
 
 ### Library and dataset (3 points)
 
