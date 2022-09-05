@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this session, you will code the first part of our project: a sentiment classifier. Where you will use and compare several classifiers on the IMDB sentiment dataset.
+In this session, you will code a sentiment classifier on the IMDB sentiment dataset.
 
 **Please, read the full assignment before starting.**
 
@@ -15,7 +15,7 @@ For coding standards, please respect the following guidelines
 * Packaging your functions and classes in separate python files make them more easily reusable.
 * Don't hesitate commenting in details part of the code you consider complex or hard to read.
 
-Do not hesitate contacting me if you have any question, but please don't wait until the last moment to do so.
+Do not hesitate contacting me if you have any question, but please don't wait until the last moment.
 
 ## The dataset **(3 points)**
 
@@ -31,18 +31,20 @@ Download and look at the dataset, and answer the following questions.
 Implement your own naive Bayes classifier (the pseudo code can be found in the slides or the [book reference](https://web.stanford.edu/~jurafsky/slp3/)) or use [one provided by scikit-learn](https://scikit-learn.org/stable/modules/naive_bayes.html#multinomial-naive-bayes) combined with a [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html).
 
 Go through the following steps.
-1. Create a pretreatment function which (2 points)
+1. (2 points) Take a look at the data and create an adapted preprocessing function which at least:
    1. Lower case the text.
    2. Remove punctuation (you can use `from string import punctuation` to ease your work).
-2. Train a naive Bayes classifier on the training set. (4 points)
-3. Report the accuracy on both training and test set. (1 point)
-4. Why is accuracy a sufficient measure of evaluation here? (1 point)
+2. (4 points) Implement and train a naive Bayes classifier on the training data. Either:
+   * Code your own classifier following the algorithm given in class.
+   * Or use a scikit-learn [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) with a [CountVectorizer]((https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) and [MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html) classifier. (Recommended)
+3. (1 point) Report the accuracy on both training and test set.
+4. (1 point) Why is accuracy a sufficient measure of evaluation here?
 5. **\[Bonus\]** What are the top 10 most important words (features) for each class? (bonus points)
    1. Look at the words with the highest likelihood in each class (if you use scikit-learn, you want to check `feature_log_prob_`).
    2. Remove stopwords (see [NLTK stopwords corpus](https://pythonspot.com/nltk-stop-words/)) and check again.
 6. Take at least 2 wrongly classified example from the test set and try explaining why the model failed. (1 point)
 
-## Stemming and Lemmatization
+## Stemming and Lemmatization **(4 points)**
 
 The two notebooks in this directory give examples on how to run stemming and lemmatization using NLTK or spaCy. Pick either stemming or lemmatization, and add the operation to your pretreatment.
 
@@ -50,20 +52,10 @@ The two notebooks in this directory give examples on how to run stemming and lem
 2. (1 point) Train and evaluate your model again with these pretreatment.
 3. (1 point) Are the results better or worse? Try explaining why the accuracy changed.
 
-## Theoritical questions **(5 points)**
+## Evaluation
 
-The following questions have been seen during the course and can be found on the support and references. Don't copy-paste what is written in the course, answer with your own words.
+The project must be sent back as a github (or gitlab) project containing a report and the code. The report can be written as a jupyter notebook, but if so, please use markdown to answer questions and structure your report.
 
-Answer the following questions.
-1. (2 points) Explain with your own words, using a short paragraph for each, what are:
-   * Phonetics and phonology
-   * Morphology and syntax
-   * Semantics and pragmatics
-2. (1 point) What is the difference between stemming and lemmatization?
-   * How do they both work?
-   * What are the pros and cons of both methods?
-3. (1 point) What are the two assumptions made by the Naive Bayes algorithm?
-4. 1(point) On logistic regression:
-   * How does stochastic gradient descent work?
-   * What is the role of the learning rate?
-   * Will it always find the global minimum (for logistic regression)?
+This project provides 16 points + 3 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
+
+All projects have to be send back at `marc.von-wyl` at `epita` dot `fr` before Thursday 6th of October 2022 at midnight. Thought is is advised to send them progressively.
