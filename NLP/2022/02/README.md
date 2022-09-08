@@ -54,7 +54,7 @@ The two notebooks in this directory give examples on how to run stemming and lem
 
 ## Evaluation
 
-The project must be sent back as a github (or gitlab) project containing a report and the code. The report can be written as a jupyter notebook, but if so, please use markdown to answer questions and structure your report.
+The project must be sent back as a github (or gitlab) project containing a report and the code **before the 7th of October (last chance Wednesday at midnight)**. The report can be written as a jupyter notebook, but if so, please use markdown to answer questions and structure your report.
 
 The assignment will be evaluated on the following criteria
 
@@ -71,8 +71,6 @@ For coding standards, please respect the following guidelines
 Provide a `README.md` file with 
 * A short description of the project
 * A description of the file/module architecture
-
-Please send the final project in archived zip or tar file before the 7th of October (last chance Wednesday at midnight).
 
 This project provides 16 points + 3 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
 
