@@ -36,7 +36,7 @@ Go through the following steps.
    2. Remove punctuation (you can use `from string import punctuation` to ease your work).
 2. (4 points) Implement and train a naive Bayes classifier on the training data. Either:
    * Code your own classifier following the algorithm given in class.
-   * Or use a scikit-learn [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) with a [CountVectorizer]((https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) and [MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html) classifier. (Recommended)
+   * Or use a scikit-learn [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) with a [CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) and [MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html) classifier. (Recommended)
 3. (1 point) Report the accuracy on both training and test set.
 4. (1 point) Why is accuracy a sufficient measure of evaluation here?
 5. **\[Bonus\]** What are the top 10 most important words (features) for each class? (bonus points)
