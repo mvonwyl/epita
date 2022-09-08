@@ -56,6 +56,24 @@ The two notebooks in this directory give examples on how to run stemming and lem
 
 The project must be sent back as a github (or gitlab) project containing a report and the code. The report can be written as a jupyter notebook, but if so, please use markdown to answer questions and structure your report.
 
+The assignment will be evaluated on the following criteria
+
+* A report answering the questions above, describing your technical choices, and analysing your results.
+* The quality of your code (modularity, efficiency, comments, coding standards).
+
+For coding standards, please respect the following guidelines
+* Use [docstring](https://www.programiz.com/python-programming/docstrings) format to describe your functions and their arguments
+* Use typing
+* Have clear and verbatim variable names (not x, x1, x2, xx, another_x, ...)
+* Make your results reproducible (force random seeds values)
+* Don't hesitate commenting in details part of the code you consider complex or hard to read
+
+Provide a `README.md` file with 
+* A short description of the project
+* A description of the file/module architecture
+
+Please send the final project in archived zip or tar file before the 7th of October (last chance Wednesday at midnight).
+
 This project provides 16 points + 3 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
 
 All projects have to be send back at `marc.von-wyl` at `epita` dot `fr` before Thursday 6th of October 2022 at midnight. Thought is is advised to send them progressively.
