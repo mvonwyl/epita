@@ -52,12 +52,12 @@ Provide a `README.md` file with
 * A short description of the project
 * A description of the file/module architecture
 
-This project provides 14 points + 3 points on coding standards: naming, typing, comments, and docstring + 9 points on theoritical questions. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
+This part provides 15 points + 3 points on coding standards: naming, typing, comments, and docstring + 9 points on theoritical questions. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
 
 * Naive Bayes: 19 points
 * FastText: 12 points
-* LSTM: 17 points
+* LSTM: 18 points
 * Theory: 9 points
-* **Total** 57 points (projected between 0-16).
+* **Total** 58 points (projected between 0-16).
 
 All projects have to be send back at `marc.von-wyl` at `epita` dot `fr` before Thursday 6th of October 2022 at midnight. Thought is is advised to send them progressively.
