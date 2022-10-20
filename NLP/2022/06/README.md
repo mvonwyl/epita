@@ -1,10 +1,10 @@
-# Introduction to Natural Language Processing 2 Lab03
+# Introduction to Natural Language Processing 2 Lab02
 
 ## HuggingFace Transformers
 
 Follow the [HuggingFace transformers course](https://huggingface.co/course/chapter0), from chapter 0 to 4.
 
-## **(9 points)** Sentence classification
+## **(11 points)** Sentence classification
 
 Use the HuggingFace transformer library to fine-tune a model on the IMDB library dataset and then evaluate it on the test set. As you do not necessarily have access to a good GPU, and Google Colab is not always providing well, you do not have to fine-tune the model for more than one epoch. There is a fine-tuned model available for steps 2 onward.
 
@@ -23,8 +23,8 @@ Go through the following steps.
 For what follow, you can either use a model you fully fine-tuned, or [this one](https://huggingface.co/mvonwyl/distilbert-base-uncased-imdb).
 
 2. (2 points) Evaluate the model in term of accuracy on the test data.
-3. (1 point) For at least 2 samples which have been wrongly classified in the test set, try explaining why the model could have been wrong.
-4.  (1 point) What are the advantages and inconvenient of using this model in production compared to the naive Bayes we implemented in the first part of the course?
+3. (2 point) For at least 2 samples which have been wrongly classified in the test set, try explaining why the model could have been wrong.
+4.  (2 point) What are the advantages and inconvenient of using this model in production compared to the naive Bayes we implemented in the first part of the course?
 5. **\[Bonus\]** Fine-tune your model using the accuracy as evaluation instead of the loss (default). You can use the base `Trainer` class, create your own custom trainer class, or even not use `Trainer` at all. Return the model with the best results on the validation set instead of the last one. (many points)
 
 ## Evaluation
