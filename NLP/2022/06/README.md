@@ -45,6 +45,6 @@ Provide a `README.md` file with
 * A short description of the project
 * A description of the file/module architecture
 
-This part provides 9 points + 3 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
+This part provides 11 points + 3 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions, and by packaging your code in extra python files. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, and presenting a language.
 
 All projects have to be send back at `marc.von-wyl` at `epita` dot `fr` before Thursday 17th of November 2022 at midnight. Thought is is advised to send them progressively.
