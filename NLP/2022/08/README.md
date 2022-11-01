@@ -2,7 +2,7 @@
 
 ## Introduction (1 point)
 
-Your company wants to sell a moderation API which tackle toxic content on Twitter. They ask you to come up with a model which detect toxic tweets. You remember your NLP classes, and start looking for existing models or datasets. You find a collection of [academic Twitter dataset on HuggingFace hub](https://huggingface.co/datasets/tweet_eval). Especially, the `hate` and `offensive` datasets seem close to what your boss is looking for.
+Your company wants to sell a moderation API which tackle toxic content on Twitter. They ask you to come up with a model which detect toxic tweets. You remember your NLP classes, and start looking for existing models or datasets. You find a collection of [academic Twitter dataset on HuggingFace hub](https://huggingface.co/datasets/tweet_eval). Especially, the `hate` and `offensive` datasets seem close to what you are looking for.
 
 1. (1 point) Pick one of the datasets between `hate` and `offensive`, and justify your choice. Remember that it is for a commercial application.
 
