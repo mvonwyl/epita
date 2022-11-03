@@ -18,7 +18,7 @@ Before using the data to train a model, you have the right reflex and start with
 3. (1 point) What do you think about the results? How do you think it could impact a model trained on these data?
 4. **Bonus** By default, BERTopic extracts single keywords. Play with the model to extract bigrams or more. See if you can go deeper in your analysis.
 
-## Evaluate a model (4 points)
+## Evaluate a model (5 points)
 
 You were thinking about fine-tuning a [RoBERTa](https://arxiv.org/abs/1907.11692) model on the dataset, but RoBERTa has been train on 2019 data, which do not include any tweet. Moreover, pretraining a model from scratch can be costly. Fortunately, a [reliable entity](https://github.com/cardiffnlp) pretrained RoBERTa on Tweets and even fine-tuned it on both datasets [here](https://huggingface.co/cardiffnlp/twitter-roberta-base-offensive?text=I+like+you.+I+love+you) and [here](https://huggingface.co/cardiffnlp/twitter-roberta-base-hate?text=I+like+you.+I+love+you).
 
@@ -26,7 +26,7 @@ You were thinking about fine-tuning a [RoBERTa](https://arxiv.org/abs/1907.11692
 
 To see how the model would fare on production data, you have 10K English tweets and replies available on the tweets.json file (taken from [internet archive](https://archive.org/details/archiveteam-twitter-stream-2021-07)). Note that the language was filtered using the Twitter API, so there might still be tweets in more than just English. The JSON fields were trimmed to minimum and the text was already preprocessed to mask user handles and URLs, like the tweets in your dataset.
 
-2. (2 points) Extract the top 50 tweets your model is most confident about, in the target class (offensive or hateful). Do you believe the model is doing a great job? For at least 2 tweets the model wrongly classified in your target class, try explaining what could have gone wrong.
+2. (3 points) Extract the top 50 tweets your model is most confident about in the target class (offensive or hateful), the top 50 in the neutral class, and the top 50 your model is most uncertain about. Do you believe the model is doing a great job? For at least 2 tweets the model wrongly classified in your target class, try explaining what could have gone wrong.
 3. **Bonus** Use [SHAP](https://github.com/slundberg/shap/tree/45b85c1837283fdaeed7440ec6365a886af4a333#natural-language-example-transformers) on the provided tweets, or manually written texts, to see if you can find topics on which the model is biased.
 4. **Bonus** Train a naive Bayes model on the data, and compare its results with this model.
 
@@ -94,6 +94,6 @@ Provide a `README.md` file with
 * A short description of the project
 * A description of the file/module architecture
 
-This part provides 17 points + 16 points (questions) + 2 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, going further than asked, and presenting a language.
+This part provides 18 points + 16 points (questions) + 2 points on coding standards: naming, typing, comments, and docstring. You can earn extra points by answering the bonus questions. At the end of the module, all project points are summed and projected on a grade between 0 and 16. The last 4 points can be earned by answering the bonus questions, going further than asked, and presenting a language.
 
 This part has to be sent back to `marc.von-wyl` at `epita` dot `fr` before Wednesday 23th of November 2022 at midnight.
