@@ -40,7 +40,7 @@ Go through the following steps.
 4. (1 point) Report the accuracy on both training and test set, for both your implementation and the scikit-learn one.
 5. (1 point) Most likely, the scikit-learn implementation will give better results. Looking at the documentation, explain why it could be the case.
 6. (1 point) Why is accuracy a sufficient measure of evaluation here?
-7. (1 point)Using one of the implementation, take at least 2 wrongly classified example from the test set and try explaining why the model failed.
+7. (1 point) Using one of the implementation, take at least 2 wrongly classified example from the test set and try explaining why the model failed.
 8. **\[Bonus\]** What are the top 10 most important words (features) for each class? (bonus points)
    1. Look at the words with the highest likelihood in each class (if you use scikit-learn, you want to check `feature_log_prob_`).
    2. Remove stopwords (see [NLTK stopwords corpus](https://pythonspot.com/nltk-stop-words/)) and check again.
