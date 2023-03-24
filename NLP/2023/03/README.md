@@ -16,6 +16,7 @@ For every given text, we want to generate a vector with the features seen in cla
 * Log(word count in the document).
 * Number of words in the document which are in the positive lexicon.
 * Number of words in the document which are in the negative lexicon.
+* **\[Bonus\]** Add another feature of your choice.
 
 For positive and negative lexicons, you can use the resources provided by [VADER sentiment](https://github.com/cjhutto/vaderSentiment). Look for the `vader_lexicon.txt` file and consider positive word if they score above a certain threshold (for example 1) and negative word if they score below a certain threshold (for example -1). Feel free to use another lexicon if you find one, but make sure you document your choice.
 
