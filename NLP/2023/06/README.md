@@ -20,7 +20,7 @@ As the training takes time (~20min), you can start looking at the following step
 
 At training, you will encounter `TypeError: ZipperIterDataPipe instance doesn't have valid length` (pyTorch doesn't update their tutorials). A workaround can be found [here](https://github.com/pytorch/tutorials/issues/1868).
 
-### **(5 points)** Theoretical questions
+### **(4 points)** Theoretical questions
 
 Answer the following questions.
 
@@ -29,7 +29,6 @@ Answer the following questions.
   * What is the parameter nhead for?
   * What is the point of the `generator`?
 * Describe the goal of the `create_mask` function. Why does it handle differently the source and target masks?
-* In the 
   
 
 ### **(6 points)** Decoding functions
