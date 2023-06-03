@@ -40,7 +40,7 @@ The tutorial uses a greedy approach at decoding. Implement the following variati
 
 ### **(2 points)** Compute the BLEU score of the model
 
-Use the [sacreBLEU](https://github.com/mjpost/sacreBLEU) implementation to evaluate your model and quantitatively compare the 4 implemented decoding approaches on the test set. Explain what all the output values mean (when using the `corpus_score` function).
+Use the [sacreBLEU](https://github.com/mjpost/sacreBLEU) implementation to evaluate your model and quantitatively compare the 3 implemented decoding approaches **on the full validation set**. Explain what all the output values mean (when using the `corpus_score` function).
 
 In the [python section](https://github.com/mjpost/sacrebleu#using-sacrebleu-from-python), you'll notice the library accepts more than just one possible translation as reference, but the given dataset only has one translation per sample.
 
@@ -54,7 +54,7 @@ If you want to understand in-depth how the transformer model works, I recommend 
 
 ## Evaluation
 
-The project must be sent back as a github (or gitlab) project containing a report and the code **before the Monday 29th of May at 10pm**. The report can be written as a jupyter notebook, but if so, please use markdown to answer questions and structure your report. Please send an email to `marc.von-wyl` at `epita` dot `fr`, when the project is ready to be graded.
+The project must be sent back as a github (or gitlab) project containing a report and the code **before the Sunday 4th of June at 10pm**. The report can be written as a jupyter notebook, but if so, please use markdown to answer questions and structure your report. Please send an email to `marc.von-wyl` at `epita` dot `fr`, when the project is ready to be graded.
 
 The assignment will be evaluated on the following criteria
 
