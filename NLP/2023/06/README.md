@@ -40,7 +40,7 @@ The tutorial uses a greedy approach at decoding. Implement the following variati
 
 ### **(2 points)** Compute the BLEU score of the model
 
-Use the [sacreBLEU](https://github.com/mjpost/sacreBLEU) implementation to evaluate your model and quantitatively compare the 3 implemented decoding approaches **on the full validation set**. Explain what all the output values mean (when using the `corpus_score` function).
+Use the [sacreBLEU](https://github.com/mjpost/sacreBLEU) implementation to evaluate your model and quantitatively compare the 3 implemented decoding approaches **on the full test set**. Explain what all the output values mean (when using the `corpus_score` function).
 
 In the [python section](https://github.com/mjpost/sacrebleu#using-sacrebleu-from-python), you'll notice the library accepts more than just one possible translation as reference, but the given dataset only has one translation per sample.
 
