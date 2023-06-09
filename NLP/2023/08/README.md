@@ -49,6 +49,7 @@ Regardless of the model's performances, you decide to annotate your own collecti
     * statsmodel provide an easy to use [implementation](https://www.statsmodels.org/stable/generated/statsmodels.stats.inter_rater.fleiss_kappa.html#statsmodels.stats.inter_rater.fleiss_kappa).
     * What does the score mean? Are you doing a good job annotating the data and, if not, why?
 5. **Bonus** Iterate on your annotation guideline with what you learned. Please send both version in your report.
+6. **Bonus** Evaluate the model your data. Use a majority vote for labels (remove majority "can't tell") and compute the precision, recall, and F1-score.
 
 Please provide the annotation sheets, the guideline, and the inter-annotator agreement in your report.
 
