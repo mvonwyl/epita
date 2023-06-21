@@ -19,7 +19,7 @@ Before using the data to train a model, you have the right reflex and start with
 3. (1 point) What do you think about the results? How do you think it could impact a model trained on these data?
 4. **Bonus** By default, BERTopic extracts single keywords. Play with the model to extract bigrams or more. See if you can go deeper in your analysis.
 
-## Evaluate a model (8 points)
+## Evaluate a model (6 points)
 
 You were thinking about fine-tuning a [RoBERTa](https://arxiv.org/abs/1907.11692) model on the dataset, but RoBERTa has been train on 2019 data, which do not include any tweet. Moreover, pretraining a model from scratch can be costly. Fortunately, a [reliable entity](https://github.com/cardiffnlp) pretrained RoBERTa on recent tweets and even fine-tuned it on both datasets [here](https://huggingface.co/cardiffnlp/twitter-roberta-base-offensive?text=I+like+you.+I+love+you) and [here](https://huggingface.co/cardiffnlp/twitter-roberta-base-hate?text=I+like+you.+I+love+you).
 
@@ -30,9 +30,7 @@ To see how the model would fare on production data, you have 10K English tweets 
 
 3. (2 points) Extract the top 10 tweets your model is most confident about in the target class (offensive or hateful), the top 10 in the neutral class, and the top 10 your model is most uncertain about. Do you believe the model is doing a great job?
 4. **Bonus** Use [SHAP](https://github.com/slundberg/shap/tree/45b85c1837283fdaeed7440ec6365a886af4a333#natural-language-example-transformers) on the provided tweets, or manually written texts, to see if you can find topics on which the model is biased.
-5. (2 points) What are the advantages of using a pre-trained transformer vs naive Bayes?
-    * Think about training, and usage in production.
-6. **Bonus** Train a naive Bayes model on the data, and compare its results with this model.
+5. **Bonus** Train a naive Bayes model on the data, and compare its results with this model.
 
 ## Annotate data (7 points)
 
@@ -72,5 +70,5 @@ Provide a `README.md` file with
 * A short description of the project
 * A description of the file/module architecture
 
-This part has to be sent back to `marc.von-wyl` at `epita` dot `fr` before **Thursday 22nd of June 2023 at 10pm**.
+This part has to be sent back to `marc.von-wyl` at `epita` dot `fr` before **Sunday 25th of June 2023 at 10pm**.
 
